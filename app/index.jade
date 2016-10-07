@@ -26,17 +26,39 @@ html.no-js
       // endbower
       // endbuild
 
-      // build:css styles/main.css
       link(rel='stylesheet' href='assets/css/styles.css')
-      // endbuild
-      // build:js scripts/vendor/jquery.js
-      script(src='assets/js/jquery.js')
-      // endbuild
-
-      // build:js scripts/modernizr.js
-      script(src='assets/js/modernizr.js')
-      // endbuild
+      script(src='assets/js/jquery.min.js')
+      //script(src='assets/js/modernizr.js')
+      script(src='assets/js/bootstrap.min.js')
     body
-        header#header Lorem ipsum dolor sit amet
-        main#main Aenean non eleifend magna
-        footer#footer Aenean non eleifend magna
+        .container
+          header#header
+            nav(role="navigation").navbar.navbar-default
+              .navbar-header
+                button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
+                  span.sr-only Toggle navigation
+                  span.icon-bar
+                  span.icon-bar
+                  span.icon-bar
+                a(href="#" ).navbar-brand Title
+              .collapse.navbar-collapse.navbar-ex1-collapse
+                ul.nav.navbar-nav 
+                  li.active: a(href="#") Link
+                  li: a(href="#") Link
+                form(role="search").navbar-form.navbar-left
+                  .form-group 
+                    input(type="text", placeholder="Search").form-control
+                  button(type="submit").btn.btn-default Submit
+                ul.nav.navbar-nav.navbar-right
+                  li: a(href="#") Link
+                  li.dropdown
+                    a.dropdown-toggle(href="#", data-toggle="dropdown",role="button", aria-expanded="false")
+                      | Dropdown 
+                      span.caret
+                    ul.dropdown-menu(role="menu")
+                      li: a(href="#") Action
+                      li: a(href="#") Another action
+                      li: a(href="#") Something else here
+                      li: a(href="#") Separated link
+          main#main Aenean non eleifend magna
+          footer#footer Aenean non eleifend magna
